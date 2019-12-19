@@ -11,11 +11,7 @@ const server = app.listen(3000, () => {
     var token = "Xswf7uOXsbHGHwcPOZXcpUJUyWyU3xA7Z3dkTp36gsr";
     //res notify to group line
     var eventNotify = {
-        message: "[Test]💪API Server Online",
-        //package sticker : https://devdocs.line.me/files/sticker_list.pdf
-        //emoji : https://emojipedia.org/flexed-biceps/
-        stickerPackageId: 1,
-        stickerId: 403
+        message: "[Test]💪API Server Online"
     }
     lineNotify(token, eventNotify);
     console.log('Server:3000 ready')
@@ -82,10 +78,10 @@ function lineNotify(token, eventNotify) {
         if (err) {
             console.log(err);
         } else {
-            res.json({
-                httpResponse: httpResponse,
-                body: body
-            });
+            // res.json({
+            //     httpResponse: httpResponse,
+            //     body: body
+            // });
         }
     });
 }
